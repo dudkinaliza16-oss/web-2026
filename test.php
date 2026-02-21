@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<div>Всем привет хаха</div>
+<div>Всем привет хахаха</div>
 <div>Версия PHP: <?= print phpversion(); ?></div>
 </body>
 </html>

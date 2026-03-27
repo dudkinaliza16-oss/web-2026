@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Golos UI Bold';
+    src: url('lab2/fonts/Golos UI_Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Medium';
+    src: url('lab2/fonts/Golos UI_Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Regular';
+    src: url('lab2/fonts/Golos UI_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text-entry{
+    font: 700 140px/180px 'Golos UI Bold', sans-serif;
+    letter-spacing: -1.5px;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.author-field{
+    width: 343px;
+    height: 251px;
+}
+
+.author-field__input {
+    background-color: #F2F3F5;
+    width: 343px;
+    height: 44px;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.author-field__text{
+    font: 400 15px 'Golos UI Regular', sans-serif;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+.author-field__help-block{
+    font: 400 13px 'Golos UI Regular', sans-serif;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: #808080;
+    margin-top: 5px;
+}
+
+.author-field__password-show{
+    border: none;
+    outline: none;
+    background-color: #FFFFFF00;
+}
+
+.author-field__but-cont{
+    width: 343px;
+    height: 48px;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: #222222;
+    font: 500 16px Golos UI Medium, sans-serif;
+    line-height: 100%;
+    color: #FFFFFF;
+}

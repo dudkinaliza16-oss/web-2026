@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Golos UI Bold';
+    src: url('lab2/fonts/Golos UI_Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Medium';
+    src: url('lab2/fonts/Golos UI_Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Regular';
+    src: url('lab2/fonts/Golos UI_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menu-bar{
+    width: 40px;
+    height: 140px;
+}
+
+.menu-bar__button{
+    border: none;
+    outline: none;
+    background-color: #FFFFFF00;
+}
+
+.main-feed{
+    width: 474px;
+    height: 1338px;
+}
+
+.post-user{
+    width: 474px;
+    height: 700px;
+}
+
+.post-user__header {
+    width: 474px;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.post-user__header-name-block{
+    width: 132px;
+    height: 32px;
+}
+
+.header__name{
+    width: 90px;
+    height: 18px;
+    font: 500 14px'Golos UI Medium', sans-serif;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    display: inline;
+}
+
+.post-user__edit{
+    border: none;
+    outline: none;
+    background-color: #FFFFFF00;
+}
+
+.post-user__count-photo{
+    width: 44px;
+    height: 24px;
+    border-radius: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #22222280;
+    backdrop-filter: blur(12px);
+}
+
+.post-user__count-photo-text{
+    font:400 15px/18px 'Golos UI Regular', sans-serif;
+    letter-spacing: -0.15px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.post-user__photo{
+    width: 474px;
+    height: 474px;
+}
+
+.post-user__button-photo{
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    backdrop-filter: blur(13px);
+    border: none;
+    outline: none;
+}
+
+.left{
+    background-color: #FFFFFF1A;
+}
+
+.right{
+    background: #FFFFFF99;
+}
+
+.post-user__like{
+    width: 68px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #2222220D;
+    border: none;
+    outline: none;
+
+}
+
+.post-user__like-count{
+    font:400 15px/18px 'Golos UI Regular', sans-serif;
+    letter-spacing: -0.15px;
+    display: inline;
+    align-items: center;
+}
+
+.post-user__like-photo{
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.post-user__text{
+    font:400 15px/18px 'Golos UI Regular', sans-serif;
+    letter-spacing: -0.15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-user__more{
+    font:400 15px/18px 'Golos UI Regular', sans-serif;
+    letter-spacing: -0.15px;
+    color: #808080;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-user__time{
+    font:400 14px/18px 'Golos UI Regular', sans-serif;
+    letter-spacing: -0.15px;
+    vertical-align: middle;
+    color: #22222280;
+    margin-top: 0;
+    margin-bottom: 0;
+}

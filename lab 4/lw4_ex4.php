@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_GET) {
-        $start = $_GET['start'] . PHP_EOL;
-        $finish = $_GET['finish'] . PHP_EOL;
+    if ($_POST) {
+        $start = $_POST['start'] . PHP_EOL;
+        $finish = $_POST['finish'] . PHP_EOL;
         function stringToArray($str): int
         {
             $i = 0;
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             return $str;
         }
-        if ((stringToArray($start) !== 6) || (stringToArray($finish) !== 6)) {
+        if ((stringToArray($start) !== 6) || (stringToArray($finish) !== 6) || ((int)$start > (int)$finish)) {
             print("Некорректный ввод");
         } else {
             for ($i = (int)$start; $i <= (int)$finish; $i++) {

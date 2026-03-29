@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Golos UI Bold';
+    src: url('lab2/fonts/Golos UI_Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Medium';
+    src: url('lab2/fonts/Golos UI_Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Regular';
+    src: url('lab2/fonts/Golos UI_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menu-bar{
+    width: 40px;
+    height: 140px;
+}
+
+.menu-bar__button{
+    border: none;
+    outline: none;
+    background-color: #FFFFFF00;
+}
+
+.profile__name{
+    font: 500 32px/32px 'Golos UI Medium', sans-serif;
+    letter-spacing: -0.25px;
+}
+
+.profile__description{
+    font:400 15px/18px Golos UI Regular, sans-serif;
+    letter-spacing: -0.15px;
+    text-align: center;
+    width: 361px;
+    height: 36px;
+}
+
+.profile__count-post{
+    width: 101px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #F2F3F5;
+    text-align: center;
+}
+
+.count-post__text{
+    font:400 15px/18px Golos UI Regular, sans-serif;
+    letter-spacing: -0.15px;
+    vertical-align: middle;
+    display: inline;
+}
+
+.profile-photos{
+    width: 975px;
+    height: 1625px;
+}

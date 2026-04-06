@@ -19,17 +19,32 @@
     font-style: normal;
 }
 
-.text-entry{
-    font: 700 140px/180px 'Golos UI Bold', sans-serif;
+.main-area{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 107px;
+}
+
+.main-area__block-photo {
+    position: relative;
+    width: fit-content;
+}
+
+.block-photo__text-entry{
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    font: 700 140px / 180px 'Golos UI Bold', sans-serif;
     letter-spacing: -1.5px;
     color: #222222;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
+
 
 .author-field{
     width: 343px;
-    height: 251px;
 }
 
 .author-field__input {
@@ -38,6 +53,11 @@
     height: 44px;
     border-radius: 10px;
     border-width: 0;
+
+}
+
+.author-field__password-block{
+    position: relative;
 }
 
 .author-field__text{
@@ -60,9 +80,14 @@
     border: none;
     outline: none;
     background-color: #FFFFFF00;
+    position: absolute;
+    z-index: 1;
+    top: 28px;
+    right: 1px;
 }
 
 .author-field__but-cont{
+    margin-top: 32px;
     width: 343px;
     height: 48px;
     border-radius: 10px;

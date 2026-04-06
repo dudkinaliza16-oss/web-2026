@@ -4,24 +4,24 @@ $posts = [
                 'postId' => 1,
                 'avatar' => '../images/avatar/avatar_vanya.png',
                 'authorName' => 'Ваня Денисов',
+                'authorId' => '@IvanDenisov',
                 'postPhoto' => ['../images/post_photo/snow_street_and_man.png',
                         ],
-                'countLike' => '243',
+                'countLike' => 243,
                 'description' => 'Так красиво сегодня на улице! Настоящая зима))
                  Вспоминается Бродский: «Поздно ночью, в уснувшей долине, на 
                  самом дне, в городке, занесенном снегом по ручку двери...» ',
-            'timeAgo' => '2 часа назад'
-
+                'timeAgo' => 1775123280
         ],
         [
                 'postId' => 2,
                 'avatar' => '../images/avatar/avatar_liza.png',
                 'authorName' => 'Лиза Дёмина',
+                'authorId' => '@LizaDemina',
                 'postPhoto' => ['../images/post_photo/paper_and_flowers.jpg',],
-                'countLike' => '534',
+                'countLike' => 534,
                 'description' => '',
-                'timeAgo' => '1 день назад'
-
+                'timeAgo' => 1775036320
         ]
 ];
 ?>

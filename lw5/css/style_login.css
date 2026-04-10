@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'Golos UI Bold';
-    src: url('lab2/fonts/Golos UI_Bold.woff2') format('woff2');
+    src: url('lw5/fonts/GolosUI_Bold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Golos UI Medium';
-    src: url('lab2/fonts/Golos UI_Medium.woff2') format('woff2');
+    src: url('lw5/fonts/GolosUI_Medium.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Golos UI Regular';
-    src: url('lab2/fonts/Golos UI_Regular.woff2') format('woff2');
+    src: url('lw5/fonts/GolosUI_Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 .main-area{
-    height: 700px;
+    height: 740px;
     display: flex;
     align-items: center;
     justify-content: center;

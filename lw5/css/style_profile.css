@@ -1,27 +1,39 @@
 @font-face {
     font-family: 'Golos UI Bold';
-    src: url('lab2/fonts/Golos UI_Bold.woff2') format('woff2');
+    src: url('lw5/fonts/GolosUI_Bold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Golos UI Medium';
-    src: url('lab2/fonts/Golos UI_Medium.woff2') format('woff2');
+    src: url('lw5/fonts/GolosUI_Medium.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Golos UI Regular';
-    src: url('lab2/fonts/Golos UI_Regular.woff2') format('woff2');
+    src: url('lw5/fonts/GolosUI_Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
 .menu-bar{
+    display: flex;
+    flex-direction: column;
     width: 40px;
-    height: 140px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
 }
 
 .menu-bar__button{
@@ -30,9 +42,17 @@
     background-color: #FFFFFF00;
 }
 
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile__name{
     font: 500 32px/32px 'Golos UI Medium', sans-serif;
     letter-spacing: -0.25px;
+    margin-bottom: 0px;
+    margin-top: 20px;
 }
 
 .profile__description{
@@ -41,6 +61,8 @@
     text-align: center;
     width: 361px;
     height: 36px;
+    margin-top: 10px;
+    margin-bottom: 12px;
 }
 
 .profile__count-post{
@@ -49,6 +71,10 @@
     border-radius: 6px;
     background-color: #F2F3F5;
     text-align: center;
+    margin-bottom: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .count-post__text{
@@ -61,4 +87,14 @@
 .profile-photos{
     width: 975px;
     height: 1625px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.profile-photos img {
+    width: 100%;
+    height: 322px;
+    object-fit: cover;
 }

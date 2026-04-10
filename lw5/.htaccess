@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteBase /lab5/
+RewriteBase /
 
-RewriteRule ^post/([0-9]+)$ post/index.php?postId=$1 [L,QSA]
+RewriteRule ^post/([0-9]+)/?$ post/index.php?postId=$1 [L]

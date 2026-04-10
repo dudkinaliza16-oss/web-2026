@@ -34,7 +34,7 @@ $posts = [
     <link href="../css/style_home.css" rel="stylesheet">
 </head>
 <body>
-<div>
+<div class="main">
     <nav class="menu-bar">
         <a href="#" class="menu-bar__button" title="Home Active">
             <img src="../item/mi_home_active.png" width="40" height="40" alt="Home Active">

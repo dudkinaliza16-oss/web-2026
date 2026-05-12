@@ -19,40 +19,67 @@
     font-style: normal;
 }
 
+body{
+    margin: 0;
+}
+
 .main{
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+}
+
+.sidebar{
+    border-right: 1px #2222225D solid;
 }
 
 .menu-bar{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 20px 44px 16px 44px 16px 44px 1fr ;
     width: 40px;
     height: 100vh;
-    top: 0;
-    left: 0;
+    left: 16px;
     position: fixed;
+
 }
 
 .menu-bar__button{
     border: none;
     outline: none;
     background-color: #FFFFFF00;
+    width: 40px;
+    height: 40px;
+}
+.home{
+    grid-row-start: 2;
+}
+.person{
+    grid-row-start: 4;
+}
+.add{
+    grid-row-start: 6;
+}
+.main-feed{
+    grid-column-start: 2;
+    margin: 73px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 }
 
 .profile{
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
     align-items: center;
 }
 
 .profile__name{
     font: 500 32px/32px 'Golos UI Medium', sans-serif;
     letter-spacing: -0.25px;
-    margin-bottom: 0px;
-    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .profile__description{
@@ -60,7 +87,6 @@
     letter-spacing: -0.15px;
     text-align: center;
     width: 361px;
-    height: 36px;
     margin-top: 10px;
     margin-bottom: 12px;
 }
@@ -71,7 +97,6 @@
     border-radius: 6px;
     background-color: #F2F3F5;
     text-align: center;
-    margin-bottom: 42px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -86,8 +111,6 @@
 
 .profile-photos{
     width: 975px;
-    height: 1625px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3px;

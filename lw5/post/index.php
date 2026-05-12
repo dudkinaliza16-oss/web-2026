@@ -50,20 +50,20 @@
         <div class="main">
             <nav class="menu-bar">
                 <a href="#" class="menu-bar__button" title="Home Active">
-                    <img src="../item/mi_home_active.png" width="40" height="40" alt="Home Active">
+                    <img src="../item/mi_home_active.png" alt="Home Active">
                 </a>
                 <a href="#" class="menu-bar__button" title="Person">
-                    <img src="../item/menu_item_person.png" width="40" height="40" alt="Person">
+                    <img src="../item/menu_item_person.png" alt="Person">
                 </a>
                 <a href="#" class="menu-bar__button" title="Add Post">
-                    <img src="../item/menu_item_add.png" width="40" height="40" alt="Add Post">
+                    <img src="../item/menu_item_add.png" alt="Add Post">
                 </a>
             </nav>
 
             <div class="post-user">
                 <div class="post-user__header">
                     <div class="header__name-avatar">
-                        <img src="<?= $post['avatar'] ?>" width="32" height="32" alt="Avatar user">
+                        <img src="<?= $post['avatar'] ?>" alt="Avatar user">
                         <p class="header__name"><?= $post['authorName'] ?></p>
                     </div>
                 </div>

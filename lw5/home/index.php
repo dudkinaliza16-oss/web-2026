@@ -27,7 +27,7 @@ $posts = [
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
@@ -35,17 +35,19 @@ $posts = [
 </head>
 <body>
 <div class="main">
-    <nav class="menu-bar">
-        <a href="#" class="menu-bar__button" title="Home Active">
-            <img src="../item/mi_home_active.png" width="40" height="40" alt="Home Active">
-        </a>
-        <a href="#" class="menu-bar__button" title="Person">
-            <img src="../item/menu_item_person.png" width="40" height="40" alt="Person">
-        </a>
-        <a href="#" class="menu-bar__button" title="Add Post">
-            <img src="../item/menu_item_add.png" width="40" height="40" alt="Add Post">
-        </a>
-    </nav>
+    <div class="sidebar">
+        <nav class="menu-bar">
+            <a href="#" class="menu-bar__button home" title="Home Active">
+                <img src="../item/mi_home_active.png" alt="Home Active">
+            </a>
+            <a href="#" class="menu-bar__button person" title="Person">
+                <img src="../item/menu_item_person.png" alt="Person">
+            </a>
+            <a href="#" class="menu-bar__button add" title="Add Post">
+                <img src="../item/menu_item_add.png" alt="Add Post">
+            </a>
+        </nav>
+    </div>
     <div class="main-feed">
         <?php
         foreach ($posts as $post) {

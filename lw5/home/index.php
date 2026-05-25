@@ -1,29 +1,7 @@
 <?php
-$posts = [
-        [
-                'postId' => 1,
-                'avatar' => '../images/avatar/avatar_vanya.png',
-                'authorName' => 'Ваня Денисов',
-                'authorId' => '@IvanDenisov',
-                'postPhoto' => ['../images/post_photo/snow_street_and_man.png',
-                        ],
-                'countLike' => 243,
-                'description' => 'Так красиво сегодня на улице! Настоящая зима))
-                 Вспоминается Бродский: «Поздно ночью, в уснувшей долине, на 
-                 самом дне, в городке, занесенном снегом по ручку двери...» ',
-                'timeAgo' => 1775123280
-        ],
-        [
-                'postId' => 2,
-                'avatar' => '../images/avatar/avatar_liza.png',
-                'authorName' => 'Лиза Дёмина',
-                'authorId' => '@LizaDemina',
-                'postPhoto' => ['../images/post_photo/paper_and_flowers.jpg',],
-                'countLike' => 534,
-                'description' => '',
-                'timeAgo' => 1775036320
-        ]
-];
+require_once '../data/data_base.php';
+$connection = connectDatabase();
+$posts = getFormattedPosts($connection);
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +10,7 @@ $posts = [
     <meta charset="UTF-8">
     <title>Home page</title>
     <link href="../css/style_home.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="main">
@@ -55,6 +34,10 @@ $posts = [
         }
         ?>
     </div>
+<!--    <div class="image-viewer__container">-->
+<!--    </div>-->
 </div>
 </body>
+<script src="slider.js"></script>
+<script src="toggle.js"></script>
 </html>

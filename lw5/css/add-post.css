@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Golos UI Bold';
+    src: url('lw5/fonts/GolosUI_Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Medium';
+    src: url('lw5/fonts/GolosUI_Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golos UI Regular';
+    src: url('lw5/fonts/GolosUI_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+text{
+    font-family: 'Golos UI Regular', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+}
+
+.sidebar{
+    border-right: 1px #2222225D solid;
+}
+
+.menu-bar{
+    display: grid;
+    grid-template-rows: 20px 44px 16px 44px 16px 44px 1fr ;
+    width: 40px;
+    height: 100vh;
+    left: 16px;
+    position: fixed;
+}
+
+.menu-bar__button{
+    border: none;
+    outline: none;
+    background-color: #FFFFFF00;
+    width: 40px;
+    height: 40px;
+}
+.home{
+    grid-row-start: 2;
+}
+.person{
+    grid-row-start: 4;
+}
+.add{
+    grid-row-start: 6;
+}
+.main-feed{
+    grid-column-start: 2;
+    margin: 73px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-feed__photo-area{
+    width: 32vw;
+    aspect-ratio: 1 / 1;
+    background-color:  #F2F3F5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-area__block{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 30%;
+    align-items: center;
+    gap: 13%;
+}
+
+.block__text{
+    background-color: #000000;
+    color: #ffffff;
+    height: 25%;
+    font-family: Golos UI Medium, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 100%;
+    letter-spacing: 0;
+
+    text-align: center;
+    text-justify: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    padding-inline: 10px;
+}
+
+
+.photo-area__block img{
+    width: 50%;
+    aspect-ratio: 1 / 1;
+}
+.main-feed__add-area{
+    width: 30%;
+    aspect-ratio: 5 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-feed__add-area img{
+    width: 2vw;
+    height: 2vh;
+}
+

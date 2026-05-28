@@ -10,7 +10,8 @@ $posts = getFormattedPosts($connection);
     <meta charset="UTF-8">
     <title>Home page</title>
     <link href="../css/style_home.css" rel="stylesheet">
-
+    <script src="slider.js" defer></script>
+    <script src="switch.js" defer></script>
 </head>
 <body>
 <div class="main">
@@ -22,7 +23,7 @@ $posts = getFormattedPosts($connection);
             <a href="#" class="menu-bar__button person" title="Person">
                 <img src="../item/menu_item_person.png" alt="Person">
             </a>
-            <a href="#" class="menu-bar__button add" title="Add Post">
+            <a href="../add-post/index.php" class="menu-bar__button add" title="Add Post">
                 <img src="../item/menu_item_add.png" alt="Add Post">
             </a>
         </nav>
@@ -38,6 +39,5 @@ $posts = getFormattedPosts($connection);
 <!--    </div>-->
 </div>
 </body>
-<script src="slider.js"></script>
-<script src="toggle.js"></script>
+
 </html>

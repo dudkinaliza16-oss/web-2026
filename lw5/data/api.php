@@ -12,47 +12,63 @@ if ($method == 'POST') {
     $connection = connectDatabase();
     processPostRequest($connection);
 } else {
-    echo 'Метод не разрешён, используйте POST! <br>';
+    http_response_code(405);
 }
 function processPostRequest(PDO $connection): void
 {
-    if (isset($_POST['data'])) {
-        $json = $_POST['data'];
-    } else {
-        $json = null;
+    if (!isset($_POST['data'])) {
+        http_response_code(400);
+        echo 'Ошибка: Отсутствуют данные запроса (не передан параметр data).';
+        return;
     }
-    if ($json !== null) {
-        $data = json_decode($json, true);
-    } else {
-        $data = null;
+    $json = $_POST['data'];
+    $data = json_decode($json, true);
+    if ($data === null) {
+        http_response_code(400);
+        echo 'Ошибка: Некорректный формат JSON.';
+        return;
     }
-    // проверить наличие фото и файлов
-    if (($data != null) && isset($data['user_id'])) {
-        $postId = savePostToDatabase($connection, $data);
-        if (isset($_FILES['images'])) {
-            $imagePaths = saveUploadedImages($_FILES['images']);
-            foreach ($imagePaths as $position => $path) {
-                saveImageToDatabase($connection, $postId, $path, $position + 1);
-            }
-        }
-        echo 'Успешно! ID поста: ' . $postId;
+    if (empty($data['user_id']) || empty($data['description'])) {
+        http_response_code(400);
+        echo 'Ошибка: Некорректные данные. Обязательные поля user_id или description  пусты.';
+        return;
     }
+    if (!isset($_FILES['images']) || empty($_FILES['images']['name'])) {
+        http_response_code(400);
+        echo 'Ошибка: Нельзя создать пост без фотографий.';
+        return;
+    }
+    $imagePaths = saveUploadedImages($_FILES['images']);
+    if (empty($imagePaths)) {
+        http_response_code(400);
+        echo 'Ошибка: Ни одно изображение не было загружено. Пост не создан.';
+        return;
+    }
+    $postId = savePostToDatabase($connection, $data);
+    foreach ($imagePaths as $position => $path) {
+        saveImageToDatabase($connection, $postId, $path, $position + 1);
+    }
+    http_response_code(200);
+    echo 'Успешно! ID нового поста: ' . $postId;
 }
 
 function saveUploadedImages(array $files): array
 {
     $pathsForDatabase = [];
     $uploadDir = __DIR__ . '/../images/';
+
     if (is_array($files['name'])) {
         $names = $files['name'];
     } else {
         $names = [$files['name']];
     }
+
     if (is_array($files['tmp_name'])) {
         $tmpNames = $files['tmp_name'];
     } else {
         $tmpNames = [$files['tmp_name']];
     }
+
     foreach ($names as $index => $name) {
         if (($name != '') && ($name != null) && ($name != [])) {
             $fileName = time() . '_' . $index . '_' . basename($name);

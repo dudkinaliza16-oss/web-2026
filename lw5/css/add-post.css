@@ -25,6 +25,7 @@ text{
 
 body{
     margin: 0;
+    font-family: 'Golos UI Regular', sans-serif;
 }
 
 .main{
@@ -72,7 +73,7 @@ body{
 }
 
 .main-feed__photo-area{
-    width: 32vw;
+    width: 474px;
     aspect-ratio: 1 / 1;
     background-color:  #F2F3F5;
 
@@ -108,6 +109,10 @@ body{
     padding-inline: 10px;
 }
 
+body{
+    margin: 0;
+    font-family: "Golos UI Regular", sans-serif;
+}
 
 .photo-area__block img{
     width: 50%;
@@ -125,4 +130,9 @@ body{
     width: 2vw;
     height: 2vh;
 }
-
+.main-feed__add-description{
+    resize: none;
+    border: none;
+    outline: none;
+    background: none;
+}

@@ -34,7 +34,9 @@
             <img class src="../item/add.svg" alt="add">
             <span>Добавить фото</span>
         </div>
-        <p>Добавить подпись...</p>
+        <label>
+            <textarea class="main-feed__add-description" placeholder="Добавить подпись..."></textarea>
+        </label>
         <button>Поделиться</button>
     </div>
 

@@ -4,6 +4,7 @@
     <title>Login page</title>
     <meta charset="UTF-8">
     <link href="../css/style_login.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
     <body>
         <div class="main-area">
@@ -19,14 +20,16 @@
                 <p class="author-field__help-block">
                     Введите электропочту в формате *****@***.**
                 </p>
+
                 <div class="author-field__password-block">
                     <label class="author-field__text">
                         Пароль
                         <input type="password" name="user_password" class="author-field__input">
+                        <button class="author-field__password-show">
+                            <img src="../item/item-eye-off.png" alt="Show password">
+                        </button>
                     </label>
-                    <button class="author-field__password-show">
-                        <img src="../item/item-eye-off.png" alt="Show password">
-                    </button>
+
                 </div>
                 <button type="submit" name="submit" class="author-field__but-cont">
                     Продолжить

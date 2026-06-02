@@ -25,6 +25,7 @@ a{
 
 body{
     margin: 0;
+    font-family: "Golos UI Regular", sans-serif;
 }
 
 .main{
@@ -137,6 +138,7 @@ body{
 .post-user__photos-container {
     width: 474px;
     height: 474px;
+    cursor: pointer;
 }
 
 .post-user__photo{
@@ -207,7 +209,6 @@ body{
     line-height: 1.5em;
     max-height: 3em;
     transition: max-height 0.3s ease;
-
 }
 
 .post-user__text.expanded {
@@ -240,11 +241,79 @@ body{
     margin-bottom: 0;
 }
 
-.image-viewer__container{
+.image-viewer{
+    display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222A8;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-viewer__slider-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 474px;
+}
+
+.image-viewer__img-container {
+    width: 474px;
+    height: 474px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-viewer__img-container img {
     width: 100%;
     height: 100%;
-    color: #000000a0;
+    object-fit: contain;
+}
+
+.image-viewer__close {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.image-viewer__counter {
+    color: #ffffff;
+    font: 400 14px 'Golos UI Regular', sans-serif;
+    letter-spacing: -0.15px;
+    margin-top: 16px;
+}
+
+.image-viewer__arrow {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    backdrop-filter: blur(13px);
+    border: none;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+}
+
+.image-viewer__arrow.left {
+    background-color: #FFFFFF1A;
+    left: 16px;
+}
+
+.image-viewer__arrow.right {
+    background: #FFFFFF99;
+    right: 16px;
 }

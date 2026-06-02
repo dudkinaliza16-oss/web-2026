@@ -12,6 +12,7 @@ $posts = getFormattedPosts($connection);
     <link href="../css/style_home.css" rel="stylesheet">
     <script src="slider.js" defer></script>
     <script src="switch.js" defer></script>
+    <script src="modalWindow.js" defer></script>
 </head>
 <body>
 <div class="main">
@@ -35,9 +36,9 @@ $posts = getFormattedPosts($connection);
         }
         ?>
     </div>
-<!--    <div class="image-viewer__container">-->
-<!--    </div>-->
+
 </div>
+<div class="image-viewer"></div>
 </body>
 
 </html>
